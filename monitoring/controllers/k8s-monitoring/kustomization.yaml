@@ -4,7 +4,8 @@ resources:
   - repository.yaml
   - helmrelease.yaml
 
-
+generatorOptions:
+  disableNameSuffixHash: true
 configMapGenerator:
   - name: cluster-values
     files:
