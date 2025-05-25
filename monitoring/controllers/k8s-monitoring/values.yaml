@@ -6,9 +6,9 @@ destinations:
   - name: prometheus
     type: prometheus
     url: http://mimir-nginx.mimir.svc:80/api/v1/push
-#  - name: loki
-#    type: loki
-#    url: http://loki.loki.svc:3100/api/push
+  - name: loki
+    type: loki
+    url: http://loki.loki.svc:3100/api/push
 
 # Features
 clusterEvents:
