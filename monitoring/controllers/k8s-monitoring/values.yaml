@@ -28,7 +28,7 @@ alloy-metrics:
   enabled: true
 
 alloy-logs:
-  enabled: true
+  enabled: false
 
 alloy-singleton:
   enabled: true
