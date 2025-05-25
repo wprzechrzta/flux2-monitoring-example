@@ -1,0 +1,34 @@
+---
+cluster:
+  name: cluster-metrics-cluster
+
+destinations:
+  - name: prometheus
+    type: prometheus
+    url: http://prometheus.prometheus.svc:9090/api/v1/write
+  - name: loki
+    type: loki
+    url: http://loki.loki.svc:3100/api/push
+
+# Features
+clusterEvents:
+  enabled: true
+
+clusterMetrics:
+  enabled: true
+  controlPlane:
+    enabled: true
+
+podLogs:
+  enabled: false
+
+
+# Collectors
+alloy-metrics:
+  enabled: true
+
+alloy-logs:
+  enabled: true
+
+alloy-singleton:
+  enabled: true
