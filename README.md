@@ -1,5 +1,8 @@
 # flux2-monitoring-example
 
+## Removing objects 
+If a Flux Kustomization has spec.prune set to true and you rename the object, then all reconciled workloads will be deleted and recreated.
+
 This repository is an example of how to make use of
 [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
 and
