@@ -8,5 +8,6 @@ generatorOptions:
   disableNameSuffixHash: true
 configMapGenerator:
   - name: cluster-values
+    namespace: monitoring
     files:
       - values.yaml=values.yaml
