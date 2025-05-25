@@ -5,10 +5,10 @@ cluster:
 destinations:
   - name: prometheus
     type: prometheus
-    url: http://prometheus.prometheus.svc:9090/api/v1/write
-  - name: loki
-    type: loki
-    url: http://loki.loki.svc:3100/api/push
+    url: http://mimir-nginx.mimir.svc:80/api/v1/push
+#  - name: loki
+#    type: loki
+#    url: http://loki.loki.svc:3100/api/push
 
 # Features
 clusterEvents:
