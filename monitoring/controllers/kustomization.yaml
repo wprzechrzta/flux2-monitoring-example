@@ -4,5 +4,6 @@ resources:
   - namespace.yaml
   - k8s-monitoring
   - mimir
+  - grafana
 #    - kube-prometheus-stack
 #  - loki-stack

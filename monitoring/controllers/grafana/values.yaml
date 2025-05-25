@@ -1,0 +1,47 @@
+# Grafana configuration
+adminUser: admin
+adminPassword: admin
+
+#persistence:
+#  enabled: true
+#  size: 10Gi
+
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+    - name: Mimir
+      type: prometheus
+      url: http://mimir-nginx.mimir.svc:80
+      access: proxy
+      isDefault: true
+      
+service:
+  type: ClusterIP
+
+serviceMonitor:
+  enabled: true
+
+dashboardProviders:
+  dashboardproviders.yaml:
+    apiVersion: 1
+    providers:
+    - name: 'default'
+      orgId: 1
+      folder: ''
+      type: file
+      disableDeletion: false
+      editable: true
+      options:
+        path: /var/lib/grafana/dashboards/default
+
+dashboards:
+  default:
+    flux:
+      gnetId: 16714
+      revision: 1
+      datasource: Mimir
+    kubernetes-cluster:
+      gnetId: 15757
+      revision: 1
+      datasource: Mimir
