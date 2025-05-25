@@ -1,0 +1,45 @@
+# https://github.com/grafana/mimir/blob/main/operations/helm/charts/mimir-distributed/small.yaml
+#common:
+#  storage:
+#    backend: s3
+#    s3:
+#      region: us-east
+#      bucket_name: mimir-test
+#
+#blocks_storage:
+#  s3:
+#    bucket_name: mimir-blocks
+
+#---
+#mimir:
+#  structuredConfig:
+#    common:
+#      storage:
+#        backend: filesystem
+#    blocks_storage:
+#      backend: filesystem
+#      filesystem:
+#        dir: /data/blocks
+#    compactor:
+#      data_dir: /data/compactor
+#    ruler_storage:
+#      backend: filesystem
+#      filesystem:
+#        dir: /data/rules
+#    alertmanager_storage:
+#      backend: filesystem
+#      filesystem:
+#        dir: /data/alertmanager
+
+#nginx:
+#  service:
+#    type: ClusterIP
+#
+#minio:
+#  enabled: true
+#  mode: standalone
+#  persistence:
+#    size: 20Gi
+
+serviceMonitor:
+  enabled: true

@@ -4,5 +4,6 @@ namespace: monitoring
 resources:
   - namespace.yaml
   - k8s-monitoring
+  - mimir
 #    - kube-prometheus-stack
 #  - loki-stack
