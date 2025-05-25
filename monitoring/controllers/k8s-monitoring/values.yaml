@@ -32,3 +32,5 @@ alloy-logs:
 
 alloy-singleton:
   enabled: true
+prometheusOperatorObjects:
+  enabled: true
